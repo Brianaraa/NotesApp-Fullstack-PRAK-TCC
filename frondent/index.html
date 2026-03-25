@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NotesApp | Tugas 2 Praktikum Cloud Computing</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2 class="brand">👨🏿‍🦲 NotesApp</h2>
+                <button class="btn-new" id="open-modal-btn">+ Catatan Baru</button>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active">🏠 Semua Catatan</li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-nav">
+                <div class="search-bar">
+                    <input type="text" id="search-input" placeholder="Cari catatan...">
+                </div>
+                <div class="user-info">Nara Ganteng - 123230195</div>
+            </header>
+
+            <section class="notes-grid" id="notes-list">
+                </section>
+        </main>
+    </div>
+
+    <div class="modal-overlay" id="note-modal">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3 id="modal-title">Buat Catatan</h3>
+                <button class="close-x" id="close-modal-btn">&times;</button>
+            </div>
+            <form id="note-form">
+                <input type="hidden" id="note-id">
+                <div class="form-group">
+                    <label>Judul</label>
+                    <input type="text" id="input-judul" required placeholder="Judul catatan...">
+                </div>
+                <div class="form-group">
+                    <label>Isi Catatan</label>
+                    <textarea id="input-isi" required placeholder="Tulis sesuatu..."></textarea>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn-cancel" id="cancel-btn">Batal</button>
+                    <button type="submit" class="btn-submit">Simpan</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
